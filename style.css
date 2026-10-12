@@ -1,0 +1,46 @@
+:root{--bg:#eef2ee;--panel:#fff;--ink:#14262d;--mute:#5a7177;--line:#d3ddd8;--accent:#b97410;--good:#2f8f66;--bad:#c9473b;--sq1:#ece4cc;--sq2:#78a1a6;color-scheme:light}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0e1a20;--panel:#152a33;--ink:#e9efe9;--mute:#8fa7ad;--line:#27424c;--accent:#f0b04a;--good:#4fb286;--bad:#e0675a;--sq1:#dfd6bd;--sq2:#5a8791;color-scheme:dark}}
+:root[data-theme=dark]{--bg:#0e1a20;--panel:#152a33;--ink:#e9efe9;--mute:#8fa7ad;--line:#27424c;--accent:#f0b04a;--good:#4fb286;--bad:#e0675a;--sq1:#dfd6bd;--sq2:#5a8791;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif;padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
+.wrap{max-width:520px;margin:0 auto;padding:14px 14px 40px}
+header{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:14px;flex-wrap:wrap}
+h1,h2,.big{font-family:Georgia,"Iowan Old Style",serif;font-weight:700;margin:0}
+h1{font-size:1.3rem}h2{font-size:1.15rem;margin-bottom:6px}.big{font-size:1.7rem;line-height:1}
+nav{display:flex;gap:2px}
+nav button{background:none;border:0;border-bottom:2px solid transparent;color:var(--mute);padding:6px 9px;font:inherit;font-size:.92rem;cursor:pointer}
+nav button[aria-current=page]{color:var(--ink);border-color:var(--accent)}
+button:focus-visible,a:focus-visible,label:focus-within{outline:2px solid var(--accent);outline-offset:2px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:12px}
+.row{display:flex;align-items:center;gap:14px}
+.mu{color:var(--mute);font-size:.9rem}
+.note{font-size:.9rem;color:var(--mute);margin:0 0 12px}
+.tag{display:inline-block;font-size:.78rem;padding:1px 8px;border-radius:99px;border:1px solid var(--line);color:var(--mute);margin-left:6px}
+.tag.rev{border-color:var(--accent);color:var(--accent)}
+.bd{width:100%;height:auto;display:block;border-radius:8px}
+.pc{font-size:.92px;text-anchor:middle;font-family:"Segoe UI Symbol","Noto Sans Symbols 2","DejaVu Sans",serif;stroke-width:.035;paint-order:stroke}
+.pc.w{fill:#fff;stroke:#1b1b1b}.pc.b{fill:#1b1b1b;stroke:#eee}
+.cd{font-size:.2px;font-family:system-ui,sans-serif;font-weight:700}
+.meta{display:flex;justify-content:space-between;align-items:center;margin:0 0 10px;font-weight:600}
+.dot{display:inline-block;width:.8em;height:.8em;border-radius:50%;border:1.5px solid var(--ink);vertical-align:-1px;margin-right:6px}
+.dot.w{background:#fff}.dot.b{background:#1b1b1b}
+.btns{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
+.btn{display:block;text-align:center;text-decoration:none;color:var(--ink);background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:13px 10px;font:inherit;font-weight:600;cursor:pointer;transition:transform .12s}
+.btn:active{transform:scale(.98)}
+.btn.ok{background:var(--good);border-color:transparent;color:#fff}.btn.no{background:var(--bad);border-color:transparent;color:#fff}
+.btn.wide{grid-column:1/-1}
+.lnk{background:none;border:0;padding:0;color:var(--accent);font:inherit;text-decoration:underline;cursor:pointer}
+.ring circle{fill:none;stroke-width:7}.ring .bg{stroke:var(--line)}.ring .fg{stroke:var(--accent);stroke-linecap:round;transition:stroke-dashoffset .5s}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.stats div{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px}
+.hm{display:grid;grid-auto-flow:column;grid-template-rows:repeat(7,1fr);gap:3px}
+.hm i{aspect-ratio:1;border-radius:3px;background:var(--line)}
+.hm i.l1{background:var(--good);opacity:.35}.hm i.l2{background:var(--good);opacity:.6}.hm i.l3{background:var(--good);opacity:.8}.hm i.l4{background:var(--good)}.hm i.x{background:none}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.grid .card{margin:0;padding:8px}.grid p{margin:6px 0 0;font-size:.82rem;color:var(--mute)}
+.drop{display:block;border:2px dashed var(--line);border-radius:14px;padding:34px 16px;text-align:center;cursor:pointer;background:var(--panel)}
+.drop.over{border-color:var(--accent)}.drop input{position:absolute;opacity:0;width:1px;height:1px}
+label.f{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:10px 0}
+input[type=number],select{font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:6px 8px}
+input[type=number]{width:4.5em}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
