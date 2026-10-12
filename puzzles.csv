@@ -1,5 +1,4 @@
 page,idx,puzzle_no,fen,turn_found,status
-16,1,,2r3k1/4bppp/p3p3/q1n1P1PP/1pQ2P2/5B2/PPb5/K1NR2RR b - - 0 1,True,ok
 17,1,,r3r3/5Rpp/p1k5/P1p5/7N/6P1/2p2P1P/2R3K1 b - - 0 1,True,ok
 17,2,,R7/5Rpp/p1k1R3/P1p5/7N/6P1/2p2PKP/3r3R b - - 0 1,True,ok
 18,1,5,r2qr1k1/1b1n1p1p/pp1Q1np1/2pp4/3P4/2N1P3/PP1B1PPP/1BR2RK1 b - - 0 1,True,ok
